@@ -367,7 +367,9 @@ h2 {
   transform-style: preserve-3d;
 }
 
-.card:hover .flip-Inner {
+.card:hover .flip-Inner,
+.card:active .flip-Inner,
+.card:focus .flip-Inner {
   transform: rotateY(180deg);
 }
 
