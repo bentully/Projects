@@ -1,14 +1,41 @@
 #logo {
-  max-width: 400px;
-  max-height: 250px;
+  max-width: 328px;
+  max-height: 96px;
 }
 
 ul.navbar-nav {
   width: 100%;
-  font-family: "Chivo Mono", monospace;
+  font-family: "DM Mono", monospace;
+  text-transform: uppercase;
   font-size: 1.5rem;
 }
 
 .nav-link {
   color: #0f5132;
+}
+
+nav {
+  background-color: #dad7cd;
+}
+
+body {
+  background-color: #dad7cd;
+}
+
+.bg-hero {
+  font-family: "DM Mono", monospace;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  font-weight: 100;
+  left: 12%;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
 }
