@@ -20,14 +20,14 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid nav-contain justify-content-center">
         <div class="row w-100">
-          <div class="col-3 d-flex justify-content-start px-5">
+          <div class="col-6 d-flex justify-content-start ps-3">
             <a href="#" class="navbar-brand">
               <img src="media/fullLogo.png" id="logo" alt="Omzig Logo" />
             </a>
           </div>
-          <div class="col-9 d-flex">
+          <div class="col-6 d-flex justify-content-end pe-3">
             <button
-              class="navbar-toggler"
+              class="navbar-toggler border-0"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -38,31 +38,31 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav d-flex align-items-end justify-content-end">
-                <li class="nav-item px-5">
+                <li class="nav-item">
                   <a
                     class="nav-link link-opacity-75 link-opacity-100-hover"
                     aria-current="page"
                     href="#">
-                    Showcase
+                    Services
                   </a>
                 </li>
-                <li class="nav-item px-5">
+                <li class="nav-item">
                   <a
                     class="nav-link link-opacity-75 link-opacity-100-hover"
                     aria-current="page"
                     href="#">
-                    Quote
+                    About
                   </a>
                 </li>
-                <li class="nav-item px-5">
+                <li class="nav-item">
                   <a
                     class="nav-link link-opacity-75 link-opacity-100-hover"
                     aria-current="page"
                     href="#">
-                    Feedback
+                    Pricing
                   </a>
                 </li>
-                <li class="nav-item px-5">
+                <li class="nav-item">
                   <a
                     class="nav-link link-opacity-75 link-opacity-100-hover"
                     aria-current="page"
@@ -76,46 +76,38 @@
         </div>
       </div>
     </nav>
-
-    <main class="container-fluid">
-      <span class="h1 position-relative z-n1 bg-hero">Development</span>
-      <article id="carouselExample" class="hero carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="d-block w-100"
-              alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="d-block w-100"
-              alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="d-block w-100"
-              alt="..." />
-          </div>
+    <span
+      class="display-2 position-relative z-n1 bg-hero d-flex justify-content-center m-1">
+      Development
+    </span>
+    <main class="container-fluid p-0">
+      <article>
+        <video
+          class="w-100 bg-vid position-absolute z-n1"
+          src="media/bgVid.mp4"
+          autoplay
+          muted
+          loop></video>
+        <div
+          class="bg-cover z-n1 border border-dark d-flex align-items-center justify-content-center">
+          <section
+            class="hero border border-white border-3 d-flex flex-column align-items-center justify-content-evenly rounded-4 p-4">
+            <p class="text-center display-6">Elevate your brand!</p>
+            <h1 class="text-center display-3">
+              Crafting high-performance websites for fast-growing businesses
+              nationwide
+            </h1>
+            <p class="text-center display-6">
+              We turn local searches into loyal customers with lightning-fast
+              websites.
+            </p>
+            <a
+              href="https://calendly.com/tullyben222/30min"
+              class="btn btn-dark btn-lg">
+              Let's Scale your Business
+            </a>
+          </section>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </article>
     </main>
 
