@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #logo {
   max-width: 328px;
   max-height: 96px;
@@ -38,13 +42,12 @@ body {
 }
 
 .bg-cover {
-  background-color: rgba(15, 81, 50, 0.75);
-  opacity: 75%;
-  height: 75vh;
+  background-color: rgba(15, 81, 50, 0.45);
+  min-height: 75vh;
 }
 
 .hero {
-  background-color: rgba(218, 215, 205, 0.75);
+  background-color: rgba(218, 215, 205, 0.15);
   font-family: "DM Mono", monospace;
   text-transform: capitalize;
   color: #ffffff;
@@ -52,7 +55,7 @@ body {
   width: 80%;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero > h1 {
@@ -62,17 +65,28 @@ body {
 
 .hero > p {
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #edf2f4;
 }
 
 .hero > p:first-child {
-  font-size: 1.1rem;
   text-transform: uppercase;
-  font-weight: 400;
   color: #007200;
 }
 
 .hero > a {
   background-color: #007200;
+}
+
+.card {
+  font-family: "DM Mono", monospace;
+  box-shadow: 5px 3px 3px #007200;
+  color: #344e41;
+  letter-spacing: 0.05em;
+}
+
+.card-header {
+  color: #152219;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
