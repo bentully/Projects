@@ -205,6 +205,7 @@ nav {
 
 nav.active {
   display: flex;
+  margin: 0;
 }
 
 body {
