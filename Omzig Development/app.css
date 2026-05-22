@@ -90,3 +90,23 @@ body {
   font-weight: 700;
   font-size: 1.2rem;
 }
+
+#showcase {
+  background-color: #ffffff;
+  font-family: "DM Mono", monospace;
+  font-size: 1.25rem;
+  color: #152219;
+}
+
+#showcase > h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #007200;
+}
+
+#showcase > p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #344e41;
+}
