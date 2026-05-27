@@ -5,6 +5,21 @@ html {
 #logo {
   max-width: 328px;
   max-height: 96px;
+  width: auto;
+  height: auto;
+  transition:
+    max-width 0.2s ease,
+    max-height 0.2s ease;
+}
+
+@media (max-width: 991.98px) {
+  #logo {
+    max-width: 240px;
+  }
+
+  #logo.mobile-logo {
+    max-width: 160px;
+  }
 }
 
 ul.navbar-nav {
@@ -31,9 +46,9 @@ body {
   font-family: "DM Mono", monospace;
   text-transform: uppercase;
   background-color: #dad7cd;
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: 0.1em;
-  font-weight: 100;
+  font-weight: 500;
 }
 
 .bg-vid {
@@ -66,7 +81,7 @@ body {
 .hero > p {
   font-size: 1.25rem;
   font-weight: 500;
-  color: #edf2f4;
+  color: #dee2e6;
 }
 
 .hero > p:first-child {
@@ -92,21 +107,44 @@ body {
 }
 
 #showcase {
-  background-color: #ffffff;
+  background-color: #0f5132;
   font-family: "DM Mono", monospace;
   font-size: 1.25rem;
-  color: #152219;
+  font-weight: 100;
+  color: #dee2e6;
 }
 
 #showcase > h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: #007200;
+  color: #ffffff;
 }
 
 #showcase > p {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 500;
-  color: #344e41;
+  color: #ffffff;
+}
+
+li > h3 {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.visual {
+  background-color: #0f5132;
+}
+
+.mobile-display {
+  box-shadow: 5px 3px 3px #000000;
+}
+
+.mobile-display a {
+  background-color: #007200;
+  color: #ffffff;
+}
+
+.mobile-display a:hover {
+  color: #000000;
 }

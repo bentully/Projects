@@ -20,9 +20,11 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid nav-contain justify-content-center">
         <div class="row w-100">
-          <div class="col-6 d-flex justify-content-start ps-3">
-            <a href="#" class="navbar-brand">
-              <img src="media/fullLogo.png" id="logo" alt="Omzig Logo" />
+          <div class="col-6 d-flex justify-content-center">
+            <a href="#" class="navbar-brand ms-5">
+              <img src="media/fullLogo.png" id="logo" alt="Omzig Logo"
+                data-full-logo="media/fullLogo.png"
+                data-mobile-logo="media/mobileLogo.png" />
             </a>
           </div>
           <div class="col-6 d-flex justify-content-end pe-3">
@@ -60,6 +62,14 @@
                     aria-current="page"
                     href="#">
                     Showcase
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link link-opacity-75 link-opacity-100-hover"
+                    aria-current="page"
+                    href="#">
+                    Pricing
                   </a>
                 </li>
                 <li class="nav-item">
@@ -148,32 +158,51 @@
       <article
         id="showcase"
         class="container-md d-flex flex-column align-items-center justify-content-center p-2">
-        <h2 class="mt-5">Featured Case Study</h2>
+        <h2 class="my-5">Featured Case Study</h2>
         <p class="display-3 m-3">
           Transforming Local Businesses Through High-Performance Design
         </p>
         <ul class="list-unstyled m-3">
-          <li class="mb-5">
+          <li class="mb-4">
             <h3>The Client:</h3>
 
             Verix Barbershop
           </li>
-          <li class="mb-5">
+          <li class="mb-4">
             <h3>The Objective:</h3>
 
             Verix Barbershop needed a modern, ultra-premium online storefront to
             help take their new business to the next level, showcase their
-            talented team and seamlessly driving new clients to book with them.
+            talented team and seamlessly drive new clients to book with them.
           </li>
-          <li class="mb-5">
+          <li class="mb-4">
             <h3>The Omzig Solution:</h3>
 
             We integrated a high-converting "Book Now" infrastructure that
             captures clients instantly on both mobile and desktop platforms.
             Along with engineering a clean and fast media gallery to display
-            their craftmanship.
+            their craftsmanship.
           </li>
         </ul>
+        <section class="visual p-2">
+          <div class="card mb-3 d-sm-none mobile-display" style="max-width: 360px">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <video
+                  src="media/mobileShowcase.mp4"
+                  class="object-fit-cover mw-100 mh-100 rounded"
+                  alt="mobile layout showcase" autoplay muted loop >
+              </div>
+              <div class="col-md-8">
+                <div class="card-body text-center p-3">
+                  <h5 class="card-title pb-2">A quick view of Verix's mobile website layout, custom designed to maximize local appointment conversions.</h5>
+                  <a href="https://resonant-chebakia-7a727e.netlify.app/" class="btn text-uppercase">Take a Look</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="desktop-display"></div>
+        </section>
       </article>
     </main>
 
@@ -181,5 +210,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"></script>
+    <script src="app.js"></script>
   </body>
 </html>
