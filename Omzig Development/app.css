@@ -114,20 +114,21 @@ body {
   color: #dee2e6;
 }
 
-#showcase > h2 {
+h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
   color: #ffffff;
 }
 
-#showcase > p {
+#showcase p,
+#pricing p {
   font-size: 1.75rem;
   font-weight: 500;
   color: #ffffff;
 }
 
-li > h3 {
+li h3 {
   color: #ffffff;
   font-weight: 500;
 }
@@ -137,7 +138,7 @@ li > h3 {
 }
 
 .mobile-display {
-  box-shadow: 5px 3px 3px #000000;
+  box-shadow: 10px 6px 6px #000000;
 }
 
 .mobile-display a {
@@ -147,4 +148,16 @@ li > h3 {
 
 .mobile-display a:hover {
   color: #000000;
+}
+
+#pricing {
+  font-family: "DM Mono", monospace;
+}
+
+#pricing h2 {
+  color: #007200;
+}
+
+#pricing p {
+  color: #152219;
 }
