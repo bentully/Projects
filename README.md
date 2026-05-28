@@ -1,0 +1,2 @@
+Welcome to my Web Development Portfolio. This repo includes my live project, and my work in progress that will be live soon with many more to come. It excludes projects I've done in bootcamp like a basic registration page, a full bootstrap-built mockup, and a guessing game utilizing javascript. I've built these while learning and improving my developer skills.
+Here is the link to my live project (waiting on client to buy domain name): https://verixbarbershop.netlify.app/
