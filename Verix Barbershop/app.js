@@ -19,56 +19,33 @@ navLinks.forEach((link) => {
   });
 });
 
-window.addEventListener("scroll", function () {
-  const barbersSection = this.document.querySelector("#barbers");
+// Parallax scroll with requestAnimationFrame for optimized performance
+let ticking = false;
+const parallaxSections = [
+  { element: document.querySelector("#barbers") },
+  { element: document.querySelector("#about") },
+  { element: document.querySelector("#gallery") },
+  { element: document.querySelector("#contact") },
+];
 
-  if (!barbersSection) return;
+function updateParallax() {
+  parallaxSections.forEach((section) => {
+    if (!section.element) return;
 
-  const scrollPosition = window.scrollY;
-  const sectionTop = barbersSection.offsetTop;
+    const scrollPosition = window.scrollY;
+    const sectionTop = section.element.offsetTop;
+    const distance = scrollPosition - sectionTop;
 
-  const distance = scrollPosition - sectionTop;
+    section.element.style.backgroundPosition = `center ${distance * 0.4}px`;
+  });
+  ticking = false;
+}
 
-  barbersSection.style.backgroundPosition = `center ${distance * 0.4}px`;
-});
-
-window.addEventListener("scroll", function () {
-  const aboutSection = this.document.querySelector("#about");
-
-  if (!aboutSection) return;
-
-  const scrollPosition = window.scrollY;
-  const sectionTop = aboutSection.offsetTop;
-
-  const distance = scrollPosition - sectionTop;
-
-  aboutSection.style.backgroundPosition = `center ${distance * 0.4}px`;
-});
-
-window.addEventListener("scroll", function () {
-  const gallerySection = this.document.querySelector("#gallery");
-
-  if (!gallerySection) return;
-
-  const scrollPosition = window.scrollY;
-  const sectionTop = gallerySection.offsetTop;
-
-  const distance = scrollPosition - sectionTop;
-
-  gallerySection.style.backgroundPosition = `center ${distance * 0.4}px`;
-});
-
-window.addEventListener("scroll", function () {
-  const contactSection = this.document.querySelector("#contact");
-
-  if (!contactSection) return;
-
-  const scrollPosition = window.scrollY;
-  const sectionTop = contactSection.offsetTop;
-
-  const distance = scrollPosition - sectionTop;
-
-  contactSection.style.backgroundPosition = `center ${distance * 0.4}px`;
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    requestAnimationFrame(updateParallax);
+    ticking = true;
+  }
 });
 
 // Service info overlays (data-target -> corresponding info div)
