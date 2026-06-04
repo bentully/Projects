@@ -60,6 +60,7 @@ body {
 .bg-cover {
   background-color: rgba(15, 81, 50, 0.45);
   min-height: 75vh;
+  max-height: 100%;
 }
 
 .hero-left,
@@ -68,8 +69,8 @@ body {
   font-family: "DM Mono", monospace;
   text-transform: capitalize;
   color: #ffffff;
-  height: 80%;
-  width: 80%;
+  max-height: 80%;
+  max-width: 80%;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 10px 6px 6px rgba(0, 0, 0, 0.5);
@@ -181,6 +182,8 @@ li h3 {
 
 .calendly-inline-widget {
   box-shadow: 10px 6px 6px #000000;
+  min-width: auto;
+  height: 400px;
 }
 
 @media (min-width: 575.08px) {
@@ -214,7 +217,8 @@ li h3 {
 
 @media (min-width: 991.98px) {
   .calendly-inline-widget {
-    min-height: 565px;
+    min-height: 650px;
+    min-width: 250px;
   }
   ul.navbar-nav {
     font-size: 1rem;
