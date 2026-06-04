@@ -3,7 +3,7 @@ html {
 }
 
 #logo {
-  max-width: 328px;
+  max-width: 240px;
   max-height: 96px;
   width: auto;
   height: auto;
@@ -48,12 +48,13 @@ body {
   background-color: #dad7cd;
   font-size: 2rem;
   letter-spacing: 0.1em;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .bg-vid {
   object-fit: cover;
   height: 75vh;
+  pointer-events: none;
 }
 
 .bg-cover {
@@ -61,7 +62,8 @@ body {
   min-height: 75vh;
 }
 
-.hero {
+.hero-left,
+.hero-right {
   background-color: rgba(218, 215, 205, 0.15);
   font-family: "DM Mono", monospace;
   text-transform: capitalize;
@@ -73,23 +75,23 @@ body {
   box-shadow: 10px 6px 6px rgba(0, 0, 0, 0.5);
 }
 
-.hero > h1 {
-  font-size: 2.5rem;
+.hero-left > h1 {
+  font-size: 2.25rem;
   font-weight: 700;
 }
 
-.hero > p {
+.hero-left > p,
+.hero-right > p {
   font-size: 1.25rem;
   font-weight: 500;
   color: #dee2e6;
 }
 
-.hero > p:first-child {
+.hero-left > p:first-child {
   text-transform: uppercase;
-  color: #007200;
 }
 
-.hero > a {
+.hero-left > a {
   background-color: #007200;
 }
 
@@ -110,7 +112,7 @@ body {
 }
 
 #showcase {
-  background-color: #0f5132;
+  background-color: #18392b;
   font-family: "DM Mono", monospace;
   font-size: 1.25rem;
   font-weight: 100;
@@ -137,20 +139,18 @@ li h3 {
   font-weight: 500;
 }
 
-.visual {
-  background-color: #0f5132;
-}
-
 .mobile-display {
   box-shadow: 10px 6px 6px #000000;
 }
 
-.mobile-display a {
+.mobile-display a,
+.desktop-display a {
   background-color: #007200;
   color: #ffffff;
 }
 
-.mobile-display a:hover {
+.mobile-display a:hover,
+.desktop-display a:hover {
   color: #000000;
 }
 
@@ -174,7 +174,7 @@ li h3 {
 }
 
 #contact {
-  background-color: #0f5132;
+  background-color: #18392b;
   font-family: "DM Mono", monospace;
   color: #ffffff;
 }
@@ -183,9 +183,61 @@ li h3 {
   box-shadow: 10px 6px 6px #000000;
 }
 
+@media (min-width: 575.08px) {
+  .bg-hero {
+    position: absolute;
+    right: 8%;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .bg-hero {
+    right: 18%;
+  }
+
+  .hero-left {
+    width: 50%;
+  }
+
+  .story {
+    width: 50%;
+    min-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .visual {
+    width: 50%;
+    min-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+
 @media (min-width: 991.98px) {
   .calendly-inline-widget {
     min-height: 565px;
+  }
+  ul.navbar-nav {
+    font-size: 1rem;
+    gap: 10px;
+  }
+  .bg-hero {
+    font-size: 2.5rem;
+    left: 10%;
+  }
+
+  #showcase {
+    font-size: 1rem;
+  }
+
+  li h3 {
+    font-size: 1.25rem;
+  }
+  .story {
+    width: 100%;
+  }
+
+  .visual {
+    width: 100%;
   }
 }
 
