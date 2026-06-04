@@ -496,6 +496,10 @@ li > button:active {
   transition: 400ms;
 }
 
+.about-Left ul li {
+  position: relative;
+}
+
 h3 {
   margin-bottom: 50px;
   font-size: 2rem;
@@ -512,7 +516,7 @@ h3 {
 #info4,
 #info5 {
   display: none;
-  position: fixed;
+  position: absolute;
   background-color: white;
   color: black;
   font-weight: 100;
@@ -896,11 +900,29 @@ footer {
     border-radius: 15px;
     margin: auto;
   }
+
+  #mainLogo {
+    padding: 0 30px;
+  }
+
+  #hamburger {
+    padding: 0;
+    margin-right: 30px;
+  }
 }
 @media (max-width: 645px) {
   main {
     max-width: 400px;
     margin: 0 auto;
+  }
+
+  #mainLogo {
+    padding: 0 15px;
+  }
+
+  #hamburger {
+    padding: 0;
+    margin-right: 15px;
   }
 
   #info1,
@@ -971,6 +993,15 @@ footer {
   main {
     max-width: 350px;
     margin: 0 auto;
+  }
+
+  #mainLogo {
+    padding: 0 8px;
+  }
+
+  #hamburger {
+    padding: 0;
+    margin-right: 8px;
   }
 
   #info1,

@@ -58,6 +58,8 @@ function hideAllInfoBoxes() {
   infoBoxes.forEach((box) => {
     if (!box) return;
     box.classList.remove("show");
+    box.style.display = "";
+    box.style.visibility = "";
   });
 }
 
@@ -67,35 +69,55 @@ function showInfoBox(targetId, button) {
 
   hideAllInfoBoxes();
 
-  // Temporarily show to measure dimensions
+  // Temporarily show to measure dimensions without flashing the box
+  box.style.visibility = "hidden";
   box.style.display = "block";
   box.style.top = "0px";
   box.style.left = "0px";
+  box.style.right = "";
 
-  const rect = button.getBoundingClientRect();
+  const buttonRect = button.getBoundingClientRect();
+  const parentRect = box.parentElement.getBoundingClientRect();
   const boxRect = box.getBoundingClientRect();
+  const minLeft = 12 - parentRect.left;
+  const maxLeft = window.innerWidth - 12 - parentRect.left - boxRect.width;
 
-  let top = rect.top + rect.height / 2 - boxRect.height / 2;
-  let left = rect.right + 10;
+  const rightLeft = buttonRect.right - parentRect.left + 10;
+  const leftLeft = buttonRect.left - parentRect.left - boxRect.width - 10;
+  const top =
+    buttonRect.top -
+    parentRect.top +
+    buttonRect.height / 2 -
+    boxRect.height / 2;
 
-  if (left + boxRect.width > window.innerWidth - 12) {
-    left = rect.left - boxRect.width - 10;
+  let left = rightLeft;
+  if (window.innerWidth <= 850) {
+    if (leftLeft >= minLeft) {
+      left = leftLeft;
+    } else if (rightLeft > maxLeft) {
+      left = maxLeft;
+    }
+  } else {
+    if (rightLeft > maxLeft && leftLeft >= minLeft) {
+      left = leftLeft;
+    }
   }
 
-  if (left < 12) {
-    left = 12;
+  if (left < minLeft) {
+    left = minLeft;
+  }
+  if (left > maxLeft) {
+    left = maxLeft;
   }
 
-  if (top < 12) {
-    top = 12;
-  }
+  const clampedTop = Math.min(
+    Math.max(top, 12 - parentRect.top),
+    window.innerHeight - 12 - parentRect.top - boxRect.height,
+  );
 
-  if (top + boxRect.height > window.innerHeight - 12) {
-    top = window.innerHeight - boxRect.height - 12;
-  }
-
-  box.style.top = `${top}px`;
+  box.style.top = `${clampedTop}px`;
   box.style.left = `${left}px`;
+  box.style.visibility = "visible";
   box.classList.add("show");
 }
 
@@ -130,4 +152,5 @@ document.addEventListener("click", (event) => {
   }
 });
 
+window.addEventListener("scroll", hideAllInfoBoxes);
 window.addEventListener("resize", hideAllInfoBoxes);
