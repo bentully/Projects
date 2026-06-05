@@ -2,6 +2,20 @@ html {
   scroll-behavior: smooth;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.75s ease-out,
+    transform 0.75s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #logo {
   max-width: 240px;
   max-height: 96px;
@@ -186,6 +200,56 @@ li h3 {
   height: 400px;
 }
 
+.copyright {
+  background-color: #dad7cd;
+  color: #000000;
+  font-family: "DM Mono", monospace;
+  font-size: 1.25rem;
+}
+
+.form-submit {
+  background-color: #007200;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.hero-right {
+  position: relative;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    width 0.25s ease;
+}
+
+.hero-right:hover {
+  transform: translateX(-35%) translateY(-4px) scale(1.05);
+  box-shadow: 0 24px 38px rgba(0, 0, 0, 0.24);
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.7);
+  width: min(420px, 90vw);
+  z-index: 3;
+}
+
+.hero-right .hover-copy {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 1rem;
+  transition:
+    opacity 0.24s ease,
+    max-height 0.24s ease;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  color: #f4f7ee;
+}
+
+.hero-right:hover .hover-copy {
+  opacity: 1;
+  max-height: 320px;
+}
+
 @media (min-width: 575.08px) {
   .bg-hero {
     position: absolute;
@@ -245,8 +309,13 @@ li h3 {
   }
 }
 
-.form-submit {
-  background-color: #007200;
-  color: #ffffff;
-  text-transform: uppercase;
+@media (min-width: 1199.98px) {
+  .calendly-inline-widget {
+    min-height: 550px;
+    min-width: 250px;
+  }
+  ul.navbar-nav {
+    font-size: 1.25rem;
+    gap: 13px;
+  }
 }

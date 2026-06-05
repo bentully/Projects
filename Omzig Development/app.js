@@ -30,3 +30,49 @@ if (navbarCollapse && logoImage) {
     }
   });
 }
+
+function initScrollFadeIns() {
+  const animationTargets = document.querySelectorAll(
+    [
+      "#services .card",
+      "#showcase .story > p",
+      "#showcase .story ul",
+      "#showcase .story ul *",
+      "#showcase .visual",
+      "#showcase .visual *",
+      "#pricing > p",
+      "#pricing .card",
+      "#contact > p",
+      "#contact .optionA",
+      "#contact .optionA *",
+      "#contact .optionB",
+      "#contact .optionB *",
+    ].join(", "),
+  );
+
+  if (!animationTargets.length) return;
+
+  animationTargets.forEach((element) => {
+    element.classList.add("fade-in");
+  });
+
+  const observer = new IntersectionObserver(
+    (entries, observerInstance) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observerInstance.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -10% 0px",
+    },
+  );
+
+  animationTargets.forEach((element) => observer.observe(element));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initScrollFadeIns();
+});

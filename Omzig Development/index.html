@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <title>Omzig Development</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -108,7 +110,8 @@
           src="media/bgVid.mp4"
           autoplay
           muted
-          loop></video>
+          loop
+          playsinline></video>
 
         <div
           class="bg-cover position-relative z-1 d-flex align-items-center justify-content-evenly">
@@ -126,32 +129,70 @@
               class="btn btn-lg text-white">
               Get a Free Website Audit
             </a>
-            <p>Trusted by 25+ Businesses</p>
+            <p class="text-center">Trusted by 25+ Businesses</p>
           </section>
 
-          <div
-            class="position-relative z-1 d-none d-md-flex flex-column align-items-center w-25">
+          <div class="z-1 d-none d-md-flex flex-column align-items-center w-25">
             <section
-              class="hero-right border border-white border-1 rounded-4 p-2 my-5 w-100">
+              class="hero-right border border-white border-1 rounded-4 p-2 my-5 w-100"
+              data-hover-key="custom">
               <p class="text-center">
                 Custom Crafted For Your Business
                 <i class="bi bi-motherboard"></i>
               </p>
-            </section>
-
-            <section
-              class="hero-right border border-white border-1 rounded-4 p-2 my-5 w-100">
-              <p class="text-center">
-                Designed to Generate More Leads
-                <i class="bi bi-graph-up-arrow"></i>
+              <p class="hover-copy text-center p-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <br />
+                "I was tired of generic website templates that loaded slow.
+                Omzig built our platform with all our preferences in mind. They
+                took our ideas into account and made any changes we asked them
+                for."
               </p>
             </section>
 
             <section
-              class="hero-right border border-white border-1 rounded-4 p-2 my-5 w-100">
+              class="hero-right border border-white border-1 rounded-4 p-2 my-5 w-100"
+              data-hover-key="leads">
+              <p class="text-center">
+                Designed to Generate More Leads
+                <i class="bi bi-graph-up-arrow"></i>
+              </p>
+              <p class="hover-copy text-center p-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <br />
+                "Our old website looked alright but it wasn't bringing in any
+                business. Within two weeks of launching our new site with Omzig,
+                our inbound leads doubled. The layout guides visitors straight
+                to our booking funnel."
+              </p>
+            </section>
+
+            <section
+              class="hero-right border border-white border-1 rounded-4 p-2 my-5 w-100"
+              data-hover-key="trust">
               <p class="text-center">
                 Professional Design That Builds Trust
                 <i class="bi bi-shield-check"></i>
+              </p>
+              <p class="hover-copy text-center p-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <br />
+                "Omzig's website helped us build great first impressions with
+                our clients and set us apart from our competitors. It gave our
+                brand instant authority as soon as our clients land on our
+                page."
               </p>
             </section>
           </div>
@@ -206,8 +247,8 @@
 
       <article
         id="showcase"
-        class="container-lg d-flex flex-column flex-md-row flex-lg-column align-items-center justify-content-center p-5">
-        <section class="story m-4 container-sm w-100">
+        class="container-lg d-flex flex-column flex-md-row flex-lg-column align-items-center justify-content-center px-5">
+        <section class="story container-sm w-100">
           <h2 class="mt-5 text-center">Featured Case Study</h2>
           <p class="display-3 m-3">
             Transforming Businesses Through High-Performance Design
@@ -243,9 +284,11 @@
                   src="media/mobileShowcase.mp4"
                   class="object-fit-cover mw-100 mh-100 rounded"
                   alt="mobile layout showcase"
+                  preload="none"
                   autoplay
                   muted
-                  loop></video>
+                  loop
+                  playsinline></video>
               </div>
               <div class="col-12">
                 <div class="card-body text-center p-4">
@@ -268,9 +311,11 @@
                 src="media/desktopShowcase.mp4"
                 class="card-img-top object-fit-cover mw-100 mh-100"
                 alt="desktop layout showcase"
+                preload="none"
                 autoplay
                 muted
-                loop></video>
+                loop
+                playsinline></video>
               <div class="card-body text-center p-4">
                 <h5 class="card-title pb-2">
                   A custom design focused on capturing more clients. Done in 14
@@ -362,7 +407,9 @@
         </div>
       </article>
 
-      <article id="contact" class="container-lg p-5">
+      <article
+        id="contact"
+        class="container-lg d-flex flex-column align-items-center justify-content-center px-5">
         <h2 class="mt-5 text-center">The Next Step</h2>
         <p class="display-3 m-3">
           Ready to elevate your local presence and dominate your market?
@@ -396,7 +443,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="First name"
+                    placeholder="John"
                     aria-label="First name"
                     id="inputFirstName"
                     name="first-name"
@@ -410,7 +457,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Last name"
+                    placeholder="Doe"
                     aria-label="Last name"
                     id="inputLastName"
                     name="last-name"
@@ -495,7 +542,7 @@
                   </option>
                 </select>
                 <div class="d-grid gap-2 col-12">
-                  <button type="submit" class="btn btn-light form-submit">
+                  <button type="submit" class="btn btn-light form-submit mb-3">
                     Submit
                   </button>
                 </div>
@@ -503,6 +550,10 @@
             </div>
           </section>
         </div>
+      </article>
+      <article
+        class="copyright container-lg d-flex justify-content-center align-items-center p-4 mt-5 text-center">
+        <p>&copy; 2026 Omzig Development. All rights reserved.</p>
       </article>
     </main>
     <script
